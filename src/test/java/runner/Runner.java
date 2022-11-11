@@ -24,6 +24,7 @@ dryRun=true
 //tags= {"@SmokeTest and @SanityTest"}
 //tags= {"@SmokeTest and not @SanityTest"}
 //tags= {"not @SmokeTest"}
+//tags={"FunctionalTest"}
 )
 public class Runner {
 

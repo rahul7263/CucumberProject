@@ -1,3 +1,4 @@
+@FunctionalTest
 Feature: using of tags in Cucumber
 
 @SmokeTest
