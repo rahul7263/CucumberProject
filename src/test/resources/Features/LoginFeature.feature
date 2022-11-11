@@ -1,5 +1,4 @@
-Feature: Test the login functionality of OrangeHRM
-
+Feature: Test the login functionality of OrangeHRM 
 Scenario Outline: Test the valid login
 
 Given user is on loginPage
@@ -17,5 +16,6 @@ Examples:
 |username|passowrd|
 |admin   |admin123|
 |Admin   |admin123|
+
 
 

@@ -1,9 +1,13 @@
 package stepDefenation;
 
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,6 +35,17 @@ public class LoginSteps {
 		System.out.println("Step2: user enters username and password");
 		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")).sendKeys(uname);
 		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")).sendKeys(pass);
+	}
+	
+	@When("user enters credentails usig DataTable")
+	public void user_enters_credentails_usig_DataTable(DataTable datatable) {
+		
+		System.out.println("Step2: user enters username and password");
+		
+		List<List<String>> data = datatable.cells();
+			
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")).sendKeys(data.get(0).get(0));
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")).sendKeys(data.get(0).get(1));
 	}
 
 	@And("click on login button")

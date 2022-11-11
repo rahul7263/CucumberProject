@@ -20,7 +20,10 @@ monochrome=true,
 plugin= {"html:Reports\\HTMLReports","json:Reports\\JsonReports\\Cucumber.json","junit:Reports\\JUnitReprots\\Cucumber.xml"},
 
 dryRun=true
-//strict=true
+//tags= {"@SmokeTest or @SanityTest"},
+//tags= {"@SmokeTest and @SanityTest"}
+//tags= {"@SmokeTest and not @SanityTest"}
+//tags= {"not @SmokeTest"}
 )
 public class Runner {
 
