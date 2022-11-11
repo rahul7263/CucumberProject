@@ -26,11 +26,11 @@ public class LoginSteps {
 		
 	}
 
-	@When("user enters username and passowrd")
-	public void user_enters_username_and_passowrd() {
+	@When("user enters (.*) and (.*)$" )
+	public void user_enters_username_and_passowrd(String uname , String pass) {
 		System.out.println("Step2: user enters username and password");
-		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")).sendKeys("Admin");
-		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")).sendKeys("admin123");
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")).sendKeys(uname);
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")).sendKeys(pass);
 	}
 
 	@And("click on login button")
